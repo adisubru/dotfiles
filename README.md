@@ -9,7 +9,7 @@ alias gitdotf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
 2. may need to ignore the git repo itself?
 ```
-echo ".cfg" >> .gitignore
+echo "$HOME/dotfiles" >> .gitignore
 ```
 3. clone the bare repo
 ```
