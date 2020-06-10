@@ -1,0 +1,63 @@
+
+syntax on           " enable syntax processing
+filetype on
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab       " tabs are spaces
+set shiftwidth=4	" shifting during auto indent
+
+
+"UI config
+"colorscheme codedark	" nice colourscheme
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+filetype indent on      " load filetype-specific indent files
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+:set nosmd              " short for 'showmode' basically hiding the bottom-line cuz, airline
+:set noru               " short for 'ruler'
+
+" air-line fonts
+let g:airline_powerline_fonts = 1
+
+" termdebug alignment
+let g:termdebug_popup = 0
+let g:termdebug_wide = 163
+
+" for template files
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+  augroup END
+endif
+
+
+" vim-plug
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'vim-airline/vim-airline'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+"Plug 'dylanaraps/wal.vim'
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='mupdf'
+"function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+"  if a:info.status == 'installed' || a:info.force
+"    !./install.py --clang-completer --go-completer
+"  endif
+"endfunction
+
+"Plug 'Valloric/YouCompleteMe' ", { 'do': function('BuildYCM') }
+"let g:ycm_global_ycm_extra_conf = '/home/subru/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+"let g:ycm_autoclose_preview_window_after_completion = 1
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
