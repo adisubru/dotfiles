@@ -19,3 +19,5 @@ git clone --bare https://github.com/LaughingBudda/dotfiles.git $HOME/dotfiles
 ```
 gitdotf checkout
 ```
+### Additional eye-candy
+get the `iosevka nerd fonts` and `pywal`
