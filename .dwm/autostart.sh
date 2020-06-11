@@ -35,37 +35,37 @@ battery() {
     if [ $percent -gt 98 ]; then
       echo -n " $percent%"
     elif [ $percent -gt 90 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 80 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 60 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 40 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 30 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     else 
-      echo -n "$ percent%"
+      echo -n " $percent%"
     fi
   else
     if [ $percent -gt 98 ]; then
       echo -n " $percent%"
     elif [ $percent -gt 90 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 80 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 70 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 60 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 50 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 40 ]; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     elif [ $percent -gt 30 ] ; then
-      echo -n "$ percent%"
+      echo -n " $percent%"
     else 
-      echo -n "$ percent%"
+      echo -n " $percent%"
     fi
   fi
 }
