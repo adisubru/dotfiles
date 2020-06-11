@@ -27,8 +27,51 @@ cpu(){
   echo -e "💻 $cpu% cpu"
 }
 
+battery() {
+    percent="$(cat /sys/class/power_supply/BAT0/capacity)"
+    power="$(cat /sys/class/power_supply/BAT0/status)"
+  
+  if [[ $power == "Charging" || $power == "Unknown" ]]; then
+    if [ $percent -gt 98 ]; then
+      echo -n " $percent%"
+    elif [ $percent -gt 90 ] ; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 80 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 60 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 40 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 30 ] ; then
+      echo -n "$ percent%"
+    else 
+      echo -n "$ percent%"
+    fi
+  else
+    if [ $percent -gt 98 ]; then
+      echo -n " $percent%"
+    elif [ $percent -gt 90 ] ; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 80 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 70 ] ; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 60 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 50 ] ; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 40 ]; then
+      echo -n "$ percent%"
+    elif [ $percent -gt 30 ] ; then
+      echo -n "$ percent%"
+    else 
+      echo -n "$ percent%"
+    fi
+  fi
+}
+
 while true; do
      #xsetroot -name "$(cpu) | $(mem) | $(hdd) | $(dte)"
-     xsetroot -name "$(cpu) | $(mem) | $(dte)"
+     xsetroot -name "$(battery) | $(dte)"
      sleep 10s    # Update time every 10 second(s)
 done &
