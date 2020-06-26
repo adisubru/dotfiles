@@ -56,7 +56,7 @@ battery() {
   fi
 }
 
-while true; do
+while pgrep dwm; do
      #xsetroot -name "$(cpu) | $(mem) | $(hdd) | $(dte)"
      xsetroot -name "$(battery) | $(dte)"
      sleep 10s    # Update time every 10 second(s)
