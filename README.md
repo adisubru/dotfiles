@@ -1,7 +1,10 @@
 # Dotfiles
-dotfiles for my personal linux setup
+[screenshots](https://imgur.com/a/hlQwaR9)
+![alt text](https://imgur.com/DEpBmg1.png)
 
-## Installation
+
+
+## Getting the dotfiles
 the repo usees a git bare repo, with it's working directory ar `$HOME`. So cloneing the repo properly will setup all files in the correct location, and requires no extra work.
  1. add this alias to your `.bashrc` for easy operation
 ```
@@ -19,5 +22,15 @@ git clone --bare https://github.com/LaughingBudda/dotfiles.git $HOME/dotfiles
 ```
 gitdotf checkout
 ```
-### Additional eye-candy
-get the `iosevka nerd fonts` and `pywal`
+## General Setup
+- install the following suckless programs, for general functionality
+  - window manager, [dwm](https://github.com/LaughingBudda/dwm)
+  - terminal emulator, [st](https://github.com/LaughingBudda/st)
+  - lockscreen, [slock](https://tools.suckless.org/slock/)
+  - launcher, [dmenu](https://tools.suckless.org/dmenu/)
+- [dunst](https://github.com/dunst-project/dunst) for notifications
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support. I use `iosevka nerd fonts`
+- [pywal](https://github.com/dylanaraps/pywal) for setting up the colorschemes
+- [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
+- make sure `.local/bin` is in you `$PATH` for volume and brighness scripts to function properly
+
