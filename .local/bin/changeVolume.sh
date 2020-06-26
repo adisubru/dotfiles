@@ -21,7 +21,7 @@ getProgressString () {
 msgId="991049"
 
 # Change the volume using alsa(might differ if you use pulseaudio)
-amixer -c 0 set Master "$@" > /dev/null
+amixer "$@" > /dev/null
 
 # Query amixer for the current volume and whether or not the speaker is muted
 volume="$(amixer -c 0 get Master | tail -1 | awk '{print $4}' | sed 's/[^0-9]*//g')"
