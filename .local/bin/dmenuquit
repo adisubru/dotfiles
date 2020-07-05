@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+menu_list="cancel\nsuspend\nshutdown\nreboot\nlock"
+sel=$(echo -e "$menu_list" | dmenu $@ -i -l 5)
+
+case "$sel" in
+    cancel)   exit ;;
+    suspend)  systemctl suspend & ;;
+    shutdown) systemctl poweroff & ;;
+    reboot)   systemctl reboot & ;;
+    lock)     slock & ;;
+esac
