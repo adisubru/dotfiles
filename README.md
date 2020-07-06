@@ -33,4 +33,5 @@ gitdotf checkout
 - [pywal](https://github.com/dylanaraps/pywal) for setting up the colorschemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
 - make sure `.local/bin` is in you `$PATH` for volume,  brighness and dmenu scripts to function properly
-- export the `SUDO_ASKPASS` variable in bashrc. Also get the dmenu password patch & add `-P` flag to the `dmpass` script for safety.
+- export the `SUDO_ASKPASS` variable in `~/.profile`, if using a non-interactive shell to launch `dwm` and hence `dmenu` (in my case `LightDM`).
+If not, you can simple do it in the `~/.bashrc`. (also get the dmenu password patch & add `-P` flag to the `dmpass` script for safety)
