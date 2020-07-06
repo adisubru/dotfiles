@@ -27,10 +27,10 @@ gitdotf checkout
   - window manager, [dwm](https://github.com/LaughingBudda/dwm)
   - terminal emulator, [st](https://github.com/LaughingBudda/st)
   - lockscreen, [slock](https://tools.suckless.org/slock/)
-  - launcher, [dmenu](https://tools.suckless.org/dmenu/) (get pass patch)
+  - launcher, [dmenu](https://tools.suckless.org/dmenu/)
 - [dunst](https://github.com/dunst-project/dunst) for notifications
 - [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support. I use `iosevka nerd fonts`
 - [pywal](https://github.com/dylanaraps/pywal) for setting up the colorschemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
 - make sure `.local/bin` is in you `$PATH` for volume,  brighness and dmenu scripts to function properly
-- export the `SUDO_ASPASS` variable in the right location.
+- export the `SUDO_ASKPASS` variable in bashrc. Also get the dmenu password patch & add `-P` flag to the `dmpass` script for safety.
