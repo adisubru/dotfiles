@@ -10,13 +10,14 @@ the repo usees a git bare repo, with it's working directory ar `$HOME`. So clone
 ```
 alias gitdotf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
-2. may need to ignore the git repo itself?
+2. ignore repo to avoid some recursion
 ```
 echo "$HOME/dotfiles" >> .gitignore
 ```
-3. clone the bare repo
+3. clone the bare repo, and ignore untracked files
 ```
 git clone --bare https://github.com/LaughingBudda/dotfiles.git $HOME/dotfiles
+gitdotf config --local status.showUntrackedFiles no
 ```
 4.  checkout the content to your `$HOME` directory
 ```
