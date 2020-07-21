@@ -5,18 +5,19 @@
 
 
 ## Getting the dotfiles
-the repo usees a git bare repo, with it's working directory ar `$HOME`. So cloneing the repo properly will setup all files in the correct location, and requires no extra work.
+The repo uses a git bare repo, with it's working directory at `$HOME`. So cloning the repo properly will setup all files in the correct location, and requires no extra work.
  1. add this alias to your `.bashrc` for easy operation
 ```
 alias gitdotf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
-2. may need to ignore the git repo itself?
+2. ignore repo to avoid some recursion
 ```
 echo "$HOME/dotfiles" >> .gitignore
 ```
-3. clone the bare repo
+3. clone the bare repo, and ignore untracked files
 ```
 git clone --bare https://github.com/LaughingBudda/dotfiles.git $HOME/dotfiles
+gitdotf config --local status.showUntrackedFiles no
 ```
 4.  checkout the content to your `$HOME` directory
 ```
@@ -30,8 +31,7 @@ gitdotf checkout
   - launcher, [dmenu](https://tools.suckless.org/dmenu/)
 - [dunst](https://github.com/dunst-project/dunst) for notifications
 - [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support. I use `iosevka nerd fonts`
-- [pywal](https://github.com/dylanaraps/pywal) for setting up the colorschemes
+- [pywal](https://github.com/dylanaraps/pywal) for setting up the color-schemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
-- make sure `.local/bin` is in you `$PATH` for volume,  brighness and dmenu scripts to function properly
-- export the `SUDO_ASKPASS` variable in `~/.profile`, if using a non-interactive shell to launch `dwm` and hence `dmenu` (in my case `LightDM`).
-If not, you can simple do it in the `~/.bashrc`. (also get the dmenu password patch & add `-P` flag to the `dmpass` script for safety)
+- make sure `.local/bin` is in you `$PATH` for volume,  brightness and dmenu scripts to function properly
+- export the `SUDO_ASKPASS` variable in `~/.profile`, if using a non-interactive shell(like a Display Manager) to launch `dwm`(and hence dmenu), or simply in `~/.bashrc`otherwise. (also try to get the dmenu password patch & add `-P` flag to the `dmpass` script for hiding the entered password)
