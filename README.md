@@ -30,8 +30,9 @@ gitdotf checkout
   - lockscreen, [slock](https://tools.suckless.org/slock/)
   - launcher, [dmenu](https://tools.suckless.org/dmenu/)
 - [dunst](https://github.com/dunst-project/dunst) for notifications
-- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support. I use `iosevka nerd fonts`
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support(I use `iosevka nerd fonts`) 
+and [IPAfonts](https://www.archlinux.org/packages/?name=otf-ipafont) for japanese fonts.
 - [pywal](https://github.com/dylanaraps/pywal) for setting up the color-schemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
 - make sure `.local/bin` is in you `$PATH` for volume,  brightness and dmenu scripts to function properly
-- export the `SUDO_ASKPASS` variable in `~/.profile`, if using a non-interactive shell(like a Display Manager) to launch `dwm`(and hence dmenu), or simply in `~/.bashrc`otherwise. (also try to get the dmenu password patch & add `-P` flag to the `dmpass` script for hiding the entered password)
+- make sure your `.bash_profile/.profile` sources the `.bashrc` to have the environment variables set for the login shell.

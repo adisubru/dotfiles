@@ -1,17 +1,17 @@
 #!/bin/bash
 
-menu_list="cancel\nlock\nhibernate\nsuspend\nshutdown\nreboot"
+menu_list="suspend\nhibernate\nlock\nshutdown\nreboot\ncancel"
 sel=$(echo -e "$menu_list" | dmenu $@ -i -l 6)
 
 case "$sel" in
-    cancel)   exit ;;
-    lock)     slock -m "$(cowsay "$(fortune)")" & ;;
-    hibernate) 
-        slock -m "$(cowsay "$(fortune)")" &
-        systemctl hibernate & ;;
     suspend)
         slock -m "$(cowsay "$(fortune)")" &  
         systemctl suspend & ;;
+    hibernate) 
+        slock -m "$(cowsay "$(fortune)")" &
+        systemctl hibernate & ;;
+    lock)     slock -m "$(cowsay "$(fortune)")" & ;;
     shutdown) systemctl poweroff & ;;
     reboot)   systemctl reboot & ;;
+    cancel)   exit ;;
 esac
