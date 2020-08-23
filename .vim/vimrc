@@ -30,6 +30,7 @@ let g:termdebug_wide = 163
 if has("autocmd")
   augroup templates
     autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+    autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
   augroup END
 endif
 
