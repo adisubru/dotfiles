@@ -6,6 +6,8 @@ set softtabstop=4       " number of spaces in tab when editing
 set expandtab           " tabs are spaces
 set shiftwidth=4	    " shifting during auto indent
 set spell spelllang=en_us
+" quick autocorrect with Ctrl+L
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 
 "UI config

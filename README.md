@@ -6,7 +6,7 @@
 
 ## Getting the dotfiles
 The repo uses a git bare repo, with it's working directory at `$HOME`. So cloning the repo properly will setup all files in the correct location, and requires no extra work.
- 1. add this alias to your `.bashrc` for easy operation
+1. add this alias to your `.bashrc` for easy operation
 ```
 alias gitdotf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
@@ -25,12 +25,12 @@ gitdotf checkout
 ```
 ## General Setup
 - install the following suckless programs, for general functionality
-  - window manager, [dwm](https://github.com/LaughingBudda/dwm)
-  - terminal emulator, [st](https://github.com/LaughingBudda/st)
-  - lockscreen, [slock](https://tools.suckless.org/slock/)
-  - launcher, [dmenu](https://tools.suckless.org/dmenu/)
+- window manager, [dwm](https://github.com/LaughingBudda/dwm)
+- terminal emulator, [st](https://github.com/LaughingBudda/st)
+- lockscreen, [slock](https://tools.suckless.org/slock/)
+- launcher, [dmenu](https://tools.suckless.org/dmenu/)
 - [dunst](https://github.com/dunst-project/dunst) for notifications
-- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support(I use `iosevka nerd fonts`) 
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support(I use `iosevka nerd fonts`)
 and [IPAfonts](https://www.archlinux.org/packages/?name=otf-ipafont) for japanese fonts.
 - [pywal](https://github.com/dylanaraps/pywal) for setting up the color-schemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews

@@ -5,9 +5,9 @@ sel=$(echo -e "$menu_list" | dmenu $@ -i -l 6)
 
 case "$sel" in
     suspend)
-        slock -m "$(cowsay "$(fortune)")" &  
+        slock -m "$(cowsay "$(fortune)")" &
         systemctl suspend & ;;
-    hibernate) 
+    hibernate)
         slock -m "$(cowsay "$(fortune)")" &
         systemctl hibernate & ;;
     lock)     slock -m "$(cowsay "$(fortune)")" & ;;

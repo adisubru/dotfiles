@@ -28,7 +28,7 @@ cpu(){
 battery() {
     percent="$(cat /sys/class/power_supply/BAT0/capacity)"
     power="$(cat /sys/class/power_supply/BAT0/status)"
-  
+
   if [[ $power == "Charging" || $power == "Unknown" ]]; then
     echo -n " $percent%"
   else
@@ -48,7 +48,7 @@ battery() {
       echo -n " $percent%"
     elif [ $percent -gt 30 ] ; then
       echo -n " $percent%"
-    else 
+    else
       echo -n " $percent%"
     fi
   fi
