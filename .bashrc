@@ -21,6 +21,7 @@ export READER="mupdf"
 # Aliases
 alias gitdotf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias ls='ls --color=auto'
+alias ffp='firefox --private-window'
 
 # export env variables
 export PATH=$PATH:$HOME/.local/bin/

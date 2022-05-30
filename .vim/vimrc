@@ -5,6 +5,7 @@ set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
 set expandtab           " tabs are spaces
 set shiftwidth=4	    " shifting during auto indent
+set textwidth=100       " default to 100 instead of 80, and auto wrap
 set spell spelllang=en_us
 " quick autocorrect with Ctrl+L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
@@ -12,7 +13,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 "UI config
 set background=light
-colorscheme PaperColor	" nice colourscheme
+colorscheme PaperColor  " nice colourscheme
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
@@ -47,7 +48,7 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jceb/vim-orgmode'
+Plug 'axvr/org.vim'
 Plug 'junegunn/goyo.vim'
 "Plug 'junegunn/limelight.vim'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
@@ -55,7 +56,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='mupdf'
-set conceallevel=1
+set conceallevel=0
 let g:tex_conceal='abdmg'
 Plug 'sirVer/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
