@@ -21,10 +21,10 @@ getProgressString () {
 msgId="991059"
 
 # Change the brightness using xbacklight
-light "$@" > /dev/null
+xbacklight "$@" > /dev/null
 
-# Query amixer for the current brightness and notify
-brightness="$(light -G)"
+# Query xbacklight for the current brightness and notify
+brightness="$(xbacklight -get"
 dunstify -a "changeBrightness" -u low -r "$msgId" \
     "Brightness: ${brightness}%" "$(getProgressString 10 "<b> </b>" " " $brightness)"
 

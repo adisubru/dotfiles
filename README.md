@@ -16,7 +16,7 @@ echo "$HOME/dotfiles" >> .gitignore
 ```
 3. clone the bare repo, and ignore untracked files
 ```
-git clone --bare https://github.com/LaughingBudda/dotfiles.git $HOME/dotfiles
+git clone --bare https://github.com/adisubru/dotfiles.git $HOME/dotfiles
 gitdotf config --local status.showUntrackedFiles no
 ```
 4.  checkout the content to your `$HOME` directory
@@ -25,14 +25,19 @@ gitdotf checkout
 ```
 ## General Setup
 - install the following suckless programs, for general functionality
-- window manager, [dwm](https://github.com/LaughingBudda/dwm)
-- terminal emulator, [st](https://github.com/LaughingBudda/st)
+- window manager, [dwm](https://github.com/adisubru/dwm)
+- terminal emulator, [st](https://github.com/adisubru/st)
 - lockscreen, [slock](https://tools.suckless.org/slock/)
 - launcher, [dmenu](https://tools.suckless.org/dmenu/)
 - [dunst](https://github.com/dunst-project/dunst) for notifications
-- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support(I use `iosevka nerd fonts`)
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) for glyph support(I use [iosevka nerd fonts](https://archlinux.org/packages/community/any/ttf-iosevka-nerd/))
 and [IPAfonts](https://www.archlinux.org/packages/?name=otf-ipafont) for japanese fonts.
 - [pywal](https://github.com/dylanaraps/pywal) for setting up the color-schemes
 - [mupdf](https://mupdf.com/docs/manual-mupdf-gl.html) for `vim-tex` previews
-- make sure `.local/bin` is in you `$PATH` for volume,  brightness and dmenu scripts to function properly
+- make sure `.local/bin` is in you `$PATH` for volume, brightness and dmenu scripts to function properly
 - make sure your `.bash_profile/.profile` sources the `.bashrc` to have the environment variables set for the login shell.
+
+# Some other things to install tbs
+gvfs, gvfs-mtp, polkit, syncthing, signal-desktop, cowsay, fortune-mod
+ueberzug(ranger img previews)
+enable iwd, systemd-resolvd, syncthing etc.
